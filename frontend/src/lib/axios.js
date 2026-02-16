@@ -1,8 +1,12 @@
 import axios from "axios";
 
+// Detect if running locally (development) or deployed (production)
+const isDevelopment = process.env.NODE_ENV === "development";
+
+// Create axios instance
 export const axiosInstance = axios.create({
-  baseURL: "development"
-      ? "http://localhost:5001/api"
-      : "https://doctor-booking-application-backend.onrender.com/api",
-  withCredentials: true,
+  baseURL: isDevelopment
+    ? "http://localhost:5001/api"  // Your local backend
+    : "https://chat-application-5svg.onrender.com/api", // Your deployed Render backend
+  withCredentials: true, // keep cookies if needed
 });
