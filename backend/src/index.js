@@ -14,6 +14,7 @@ import { app, server } from "./lib/socket.js";
 dotenv.config();
 
 const __dirname = path.resolve();
+const PORT = process.env.PORT || 5001;
 
 const allowedOrigins = [
   "http://localhost:5173",
