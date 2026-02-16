@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Detect if running locally (development) or deployed (production)
-const isDevelopment = process.env.NODE_ENV === "development";
+const isDevelopment = import.meta.env.MODE === "development";
 
 // Create axios instance
 export const axiosInstance = axios.create({

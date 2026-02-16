@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 
 const BASE_URL = import.meta.env.MODE === "development"
       ? "http://localhost:5001"
-      : "https://doctor-booking-application-backend.onrender.com";
+      : "https://chat-application-5svg.onrender.com";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
